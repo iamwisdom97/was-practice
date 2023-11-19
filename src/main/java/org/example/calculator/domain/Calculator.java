@@ -1,13 +1,14 @@
 package org.example.calculator.domain;
 
-import org.example.calculator.tobe.AdditionOpperator;
+import org.example.calculator.tobe.AdditionOperator;
 import org.example.calculator.tobe.ArithmeticOperator;
 import org.example.calculator.tobe.DivisionOperator;
+import org.example.calculator.tobe.SubtractionOperator;
 
 import java.util.List;
 
 public class Calculator {
-    private static final List<ArithmeticOperator> arithmeticOperators = List.of(new AdditionOpperator(), new DivisionOperator());
+    private static final List<ArithmeticOperator> arithmeticOperators = List.of(new AdditionOperator(), new SubtractionOperator(), new DivisionOperator());
 
     public static int calculate(PositiveNumber operand1, String operator, PositiveNumber operand2){
         return arithmeticOperators.stream()

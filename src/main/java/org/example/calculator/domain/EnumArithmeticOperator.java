@@ -5,23 +5,23 @@ import java.util.Arrays;
 public enum EnumArithmeticOperator {
     ADDTION("+"){
         @Override
-        public int ARithmeticCalculate(int operand1, int opreand2) {
-            return operand1 + opreand2;
+        public int ARithmeticCalculate(int operand1, int operand2) {
+            return operand1 + operand2;
         }
     }, SUBTRACTION("-"){
         @Override
-        public int ARithmeticCalculate(int operand1, int opreand2) {
-            return operand1 - opreand2;
+        public int ARithmeticCalculate(int operand1, int operand2) {
+            return operand1 - operand2;
         }
     }, MULTIPLICATION("*"){
         @Override
-        public int ARithmeticCalculate(int operand1, int opreand2) {
-            return operand1 * opreand2;
+        public int ARithmeticCalculate(int operand1, int operand2) {
+            return operand1 * operand2;
         }
     }, DIVISION("/"){
         @Override
-        public int ARithmeticCalculate(int operand1, int opreand2) {
-            return operand1 / opreand2 ;
+        public int ARithmeticCalculate(int operand1, int operand2) {
+            return operand1 / operand2 ;
         }
     };
 
@@ -32,7 +32,7 @@ public enum EnumArithmeticOperator {
         this.operator = operator;
     }
 
-    public abstract int ARithmeticCalculate(final int operand1, final int opreand2);
+    public abstract int ARithmeticCalculate(final int operand1, final int operand2);
 
     public static int calculate(int operand1, String operator, int operand2) {
         EnumArithmeticOperator arithmeticOperator = Arrays.stream(values())
